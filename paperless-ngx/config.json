@@ -4,10 +4,10 @@
   "slug": "paperless",
   "url": "https://github.com/paperless-ngx/paperless-ngx",
   "description": "Paperless is an application that manages your personal documents. With the help of a document scanner, paperless transforms your wieldy physical document binders into a searchable archive and provides many utilities for finding and managing your documents.",
-  "image": "moshegrun/paperless-ngx-addon-{arch}",
+  "image": "gedemagt/paperless-ngx-addon-{arch}",
   "webui": "http://[HOST]:[PORT:8000]",
   "stage": "experimental",
-  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "arch": ["armhf", "armv7", "aarch64"],
   "startup": "system",
   "boot": "auto",
   "ports": {
