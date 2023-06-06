@@ -57,7 +57,7 @@ RUN wget -O paperless.tar.xz https://github.com/paperless-ngx/paperless-ngx/rele
 # see: https://github.com/pikepdf/pikepdf/issues/194#issuecomment-1020419586
 RUN wget -O qpdf.tar.gz https://github.com/qpdf/qpdf/releases/download/v11.4.0/qpdf-11.4.0.tar.gz \
     && tar zxf qpdf.tar.gz \
-    && mv qpdf-10.6.3 qpdf \
+    && mv qpdf-11.4.0 qpdf \
     && ls -lah \
     && cd /qpdf \
     && ./configure \
