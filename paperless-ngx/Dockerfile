@@ -48,14 +48,14 @@ RUN apt-get update \
     zlib1g \
     && mkdir /var/log/supervisord /var/run/supervisord
 
-RUN wget -O paperless.tar.xz https://github.com/paperless-ngx/paperless-ngx/releases/download/ngx-1.7.0/paperless-ngx-1.7.0.tar.xz \
+RUN wget -O paperless.tar.xz https://github.com/paperless-ngx/paperless-ngx/releases/download/ngx-1.15.0/paperless-ngx-1.15.0.tar.xz \
     && 7z x paperless.tar.xz \
     && 7z x paperless.tar -o/usr/src/ \
     && cd /usr/src 
 
 # Fix aarch64 builds
 # see: https://github.com/pikepdf/pikepdf/issues/194#issuecomment-1020419586
-RUN wget -O qpdf.tar.gz https://github.com/qpdf/qpdf/releases/download/release-qpdf-10.6.3/qpdf-10.6.3.tar.gz \
+RUN wget -O qpdf.tar.gz https://github.com/qpdf/qpdf/releases/download/release-qpdf-11.4.0/qpdf-11.4.0.tar.gz \
     && tar zxf qpdf.tar.gz \
     && mv qpdf-10.6.3 qpdf \
     && ls -lah \
@@ -125,4 +125,4 @@ EXPOSE 8000
 
 CMD ["/usr/local/bin/supervisord", "-c", "/etc/supervisord.conf"]
 
-LABEL maintainer="Moshe <34072688+TheBestMoshe@users.noreply.github.com>"
+LABEL maintainer="gedemagt"

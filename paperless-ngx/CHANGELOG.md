@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.15.0-0
+- Upgrade to paperless-ngx v1.15.0
+- Upgrade QPDF to version v11.4.0
+
 ## 1.7.0-0
 - Upgrade to paperless-ngx v1.7.0
 
