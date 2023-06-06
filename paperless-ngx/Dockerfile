@@ -46,6 +46,7 @@ RUN apt-get update \
     unzip \
     wget \
     zlib1g \
+    cmake \
     && mkdir /var/log/supervisord /var/run/supervisord
 
 RUN wget -O paperless.tar.xz https://github.com/paperless-ngx/paperless-ngx/releases/download/v1.15.1/paperless-ngx-v1.15.1.tar.xz \
@@ -60,8 +61,8 @@ RUN wget -O qpdf.tar.gz https://github.com/qpdf/qpdf/releases/download/v11.4.0/q
     && mv qpdf-11.4.0 qpdf \
     && ls -lah \
     && cd /qpdf \
-    && ./configure \
-    && make
+    && cmake -S . -B build \
+    && cmake --build build
 
 WORKDIR /usr/src/paperless-ngx/
 
