@@ -28,6 +28,7 @@ RUN apt-get update \
     libzbar0 \
     optipng \
     p7zip-full \
+    default-libmysqlclient-dev \
     pngquant \
     python3-pip \
     python3-dev \
